@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Daily Quotes</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="icon" href="static/images/DQ logo.png" type="image/png">
+</head>
+
+<body>
+    
+    <!-- Quote Box -->
+    <div class="quote d-block container h-auto w-50 p-4 bg-light position-absolute top-50 start-50 text-center shadow-lg border border-primary-subtle border-5 rounded-5">
+        <div class="mt-2 pb-5">
+
+            <!-- Heading -->
+            <h2 class="position-relative mb-5 fs-1 fw-bolder">Quote of the Day</h2>
+
+            <!-- Quote -->
+            <blockquote class="fs-3" id="line" title="Quote">Loading...</blockquote>
+
+            <!-- Artist -->
+            <span class="text-body-secondary d-block my-2 me-3 position-relative float-end fs-5 fst-italic" id="writer">loading...</span>
+        </div>
+
+        <!-- Box-Footer -->
+        <div class="footer w-100 mt-4 flex-wrap ms-4">
+
+            <!-- Speech -->
+            <span data-bs-placement="bottom" title="Listen">
+                <i class="volumeBtn bi bi-volume-up-fill border-1 rounded-pill btn btn-outline-primary me-2 mb-2 float-start"></i>
+            </span>
+
+            <!-- Copying -->
+            <span class="clipBoard" data-bs-placement="bottom" title="Copy">
+                <i class="bi bi-clipboard2-data border-1 rounded-pill btn btn-outline-primary mb-2 float-start"></i>
+            </span>
+
+            <!-- New quote button -->
+            <button type="button" class="newQ btn btn-outline-primary rounded-pill mb-2 me-4 float-sm-end" data-bs-placement="bottom" title="generate another quote">New Quote</button>
+        </div>
+    </div>
+
+    <!-- script -->
+    <script src="script.js"></script>
+
+</body>
+</html>
