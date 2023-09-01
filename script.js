@@ -38,9 +38,17 @@ const getQuotes = async () => {
 };
 
 // Speech button functionality
+let isSpeaking = false;
 volumeBtn.addEventListener("click", () => {
+    let synth = window.speechSynthesis;
     let utterance = new SpeechSynthesisUtterance(`${line.innerText} by ${writer.innerText}`);
-    speechSynthesis.speak(utterance);
+    if (isSpeaking) {
+        synth.cancel();
+        isSpeaking = false;
+    } else {
+        synth.speak(utterance);
+        isSpeaking = true;
+    }
 });
 
 // copying button functionality
