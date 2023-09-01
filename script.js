@@ -5,7 +5,7 @@ let quotesData = "";
 volumeBtn = document.querySelector(".volumeBtn");
 clipboardBtn = document.querySelector(".clipBoard");
 quoteBtn = document.querySelector("button");
-
+let synth = window.speechSynthesis;
 
 // function to show data
 const getNewQuotes = () => {
@@ -40,12 +40,13 @@ const getQuotes = async () => {
 // Speech button functionality
 let isSpeaking = false;
 volumeBtn.addEventListener("click", () => {
-    let synth = window.speechSynthesis;
     let utterance = new SpeechSynthesisUtterance(`${line.innerText} by ${writer.innerText}`);
+    utterance.voice = synth.getVoices()[2];
     if (isSpeaking) {
         synth.cancel();
         isSpeaking = false;
-    } else {
+    }
+    else {
         synth.speak(utterance);
         isSpeaking = true;
     }
