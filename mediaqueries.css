@@ -25,6 +25,15 @@
     .footer span i {
         padding: 4px 7px !important;
     }
+
+    .quote blockquote::before,
+    .quote blockquote::after {
+        font-size: 25px !important;
+    }
+
+    .quote #writer::before {
+        width: 10px !important;
+    }
 }
 
 @media (max-width: 411px) {
