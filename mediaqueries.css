@@ -1,0 +1,39 @@
+@media (max-width: 768px) {
+    .quote {
+        width: 75% !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .quote h2 {
+        font-size: 1.3rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    .quote #line {
+        font-size: 1.25rem !important;
+    }
+
+    .quote #writer {
+        font-size: 1rem !important;
+    }
+
+    button {
+        font-size: small !important;
+    }
+
+    .footer span i {
+        padding: 4px 7px !important;
+    }
+}
+
+@media (max-width: 411px) {
+    .newQ {
+        margin-right: 1rem !important;
+    }
+
+    .volumeBtn {
+        margin-left: -2rem !important;
+        margin-right: 0.25rem !important;
+    }
+}
